@@ -28,7 +28,7 @@
   --r-s: 6px;
 
   --nav-h:        60px;
-  --max-w:        1160px;
+  --max-w:        1920px;
   --max-w-prose:  660px;
 }
 
@@ -167,8 +167,6 @@ nav.site-nav {
   margin-bottom: 2.5rem;
 }
 
-/* Projects section breaks out of the standard max-width */
-#work .wrap { max-width: none; }
 
 /* ─── Stacked Project Cards ─── */
 .projects {
@@ -400,180 +398,15 @@ footer {
 }
 a.foot-text:hover { color: var(--text-muted); }
 
-/* ─── Case Study ─── */
-nav.case-nav {
-  position: fixed;
-  inset: 0 0 auto;
-  height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  z-index: 99;
-  border-bottom: 1px solid var(--border-2);
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-.back {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  transition: color 0.15s;
-}
-.back svg { transition: transform 0.15s; }
-.back:hover { color: var(--text); }
-.back:hover svg { transform: translateX(-2px); }
-
-.case-hero {
-  padding: calc(var(--nav-h) + 6rem) 0 4rem;
-}
-.case-num {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  color: var(--text-subtle);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 1rem;
-}
-.case-title {
-  font-size: clamp(2.25rem, 5vw, 4rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin-bottom: 1rem;
-  background: linear-gradient(160deg, #fafafa 40%, #52525b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.case-desc {
-  font-size: 1.0625rem;
-  color: var(--text-muted);
-  max-width: 520px;
-  line-height: 1.65;
-}
-.case-attrs {
-  display: flex;
-  gap: 3rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border-2);
-  margin-top: 2.5rem;
-}
-.attr { display: flex; flex-direction: column; gap: 0.25rem; }
-.attr-label {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-subtle);
-}
-.attr-value {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-/* Demo embed */
-.demo-wrap {
-  padding-bottom: 5rem;
-  border-bottom: 1px solid var(--border-2);
-}
-.demo-frame {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-iframe.demo-frame {
-  border: none;
-  display: block;
-}
-.demo-ph {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-}
-.demo-ph-ring {
-  width: 44px;
-  height: 44px;
-  border: 1px dashed var(--border);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-subtle);
-}
-.demo-ph p {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--text-subtle);
-}
-.demo-ph small {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  color: var(--border);
-  max-width: 280px;
-  line-height: 1.5;
-}
-
-/* Case body */
-.case-body {
-  padding: 5rem 0;
-  max-width: var(--max-w-prose);
-}
-.case-block { margin-bottom: 4rem; }
-.block-label {
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-subtle);
-  display: block;
-  margin-bottom: 1rem;
-}
-.case-block h2 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.875rem;
-  color: var(--text);
-}
-.case-block p {
-  font-size: 0.9375rem;
-  color: var(--text-muted);
-  line-height: 1.75;
-  margin-bottom: 0.875rem;
-}
-.ph-block {
-  padding: 1.25rem 1.5rem;
-  border: 1px dashed var(--border);
-  border-radius: var(--r-s);
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  color: var(--text-subtle);
-  line-height: 1.7;
-}
-
 /* ─── Responsive ─── */
 @media (max-width: 860px) {
   nav.site-nav .nav-links { display: none; }
-  .case-attrs { flex-wrap: wrap; gap: 1.5rem; }
   .projects { gap: 3.5rem; }
 }
 @media (max-width: 480px) {
   .hero-name { font-size: 2.75rem; }
   .wrap { padding: 0 1.25rem; }
-  nav.site-nav, nav.case-nav { padding: 0 1.25rem; }
+  nav.site-nav { padding: 0 1.25rem; }
   footer { padding: 2rem 1.25rem; }
   .card-body { padding: 1.5rem; }
   .projects { gap: 2.5rem; }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- PLACEHOLDER: Update with your name -->
   <title>[Your Name] — Design Engineer</title>
-  <meta name="description" content="<!-- PLACEHOLDER: One-line bio for search/OG -->">
+  <meta id="meta-desc" name="description" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <!-- ─── Nav ─────────────────────────────────────────────── -->
   <nav class="site-nav">
     <!-- PLACEHOLDER: Replace with your name, handle, or a wordmark SVG -->
-    <a href="/" class="wordmark">[your.name]</a>
+    <a href="/" class="wordmark" id="nav-wordmark">[your.name]</a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -30,13 +30,13 @@
       <div class="wrap">
         <p class="hero-eyebrow">Design Engineer</p>
         <!-- PLACEHOLDER: Your name — can be a logotype SVG, styled text, or plain text -->
-        <h1 class="hero-name">[Your Name]</h1>
+        <h1 class="hero-name" id="hero-name">[Your Name]</h1>
         <!-- PLACEHOLDER: One-line positioning statement
              Examples:
                "I build the gap between design and production."
                "Turning design systems into living, shipped products."
                "Designing in code for SaaS teams that move fast."        -->
-        <p class="hero-statement">
+        <p class="hero-statement" id="hero-statement">
           [One-line positioning statement — what you do and for whom]
         </p>
         <div class="hero-cta">
@@ -44,7 +44,7 @@
           <span>Available for roles</span>
           <span class="dot">·</span>
           <!-- PLACEHOLDER: Your email address -->
-          <a href="mailto:[your@email.com]">[your@email.com]</a>
+          <a id="hero-email" href="mailto:[your@email.com]">[your@email.com]</a>
         </div>
       </div>
     </section>
@@ -150,19 +150,41 @@
   <!-- ─── Footer ──────────────────────────────────────────────── -->
   <footer>
     <!-- PLACEHOLDER: Your name -->
-    <span class="foot-text">[Your Name]</span>
-    <span class="foot-text">2025</span>
+    <span class="foot-text" id="footer-name">[Your Name]</span>
+    <span class="foot-text" id="footer-year"></span>
   </footer>
 
   <script>
-    // Set clock hands to current local time
-    const now = new Date();
-    const h = now.getHours() % 12;
-    const m = now.getMinutes();
-    const hourDeg = h * 30 + m * 0.5;
-    const minDeg  = m * 6;
-    document.getElementById('clock-hour').style.transform = `rotate(${hourDeg}deg)`;
-    document.getElementById('clock-min').style.transform  = `rotate(${minDeg}deg)`;
+    const CONFIG = {
+      name:      "[Your Name]",
+      handle:    "[your.name]",
+      email:     "[your@email.com]",
+      statement: "[One-line positioning statement — what you do and for whom]",
+      available: true,
+    };
+
+    function populate() {
+      document.title = CONFIG.name + ' — Design Engineer';
+      document.getElementById('meta-desc').setAttribute('content', CONFIG.statement);
+      document.getElementById('nav-wordmark').textContent   = CONFIG.handle;
+      document.getElementById('hero-name').textContent      = CONFIG.name;
+      document.getElementById('hero-statement').textContent = CONFIG.statement;
+      const emailEl = document.getElementById('hero-email');
+      emailEl.textContent = CONFIG.email;
+      emailEl.href        = 'mailto:' + CONFIG.email;
+      document.getElementById('footer-name').textContent = CONFIG.name;
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+    }
+
+    populate();
+
+    // Clock hands
+    (function () {
+      const now = new Date();
+      const h = now.getHours() % 12, m = now.getMinutes();
+      document.getElementById('clock-hour').style.transform = `rotate(${h * 30 + m * 0.5}deg)`;
+      document.getElementById('clock-min').style.transform  = `rotate(${m * 6}deg)`;
+    })();
   </script>
 
 </body>
