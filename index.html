@@ -1,1 +1,169 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- PLACEHOLDER: Update with your name -->
+  <title>[Your Name] — Design Engineer</title>
+  <meta name="description" content="<!-- PLACEHOLDER: One-line bio for search/OG -->">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ─── Nav ─────────────────────────────────────────────── -->
+  <nav class="site-nav">
+    <!-- PLACEHOLDER: Replace with your name, handle, or a wordmark SVG -->
+    <a href="/" class="wordmark">[your.name]</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ─── Hero ────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="hero-eyebrow">Design Engineer</p>
+        <!-- PLACEHOLDER: Your name — can be a logotype SVG, styled text, or plain text -->
+        <h1 class="hero-name">[Your Name]</h1>
+        <!-- PLACEHOLDER: One-line positioning statement
+             Examples:
+               "I build the gap between design and production."
+               "Turning design systems into living, shipped products."
+               "Designing in code for SaaS teams that move fast."        -->
+        <p class="hero-statement">
+          [One-line positioning statement — what you do and for whom]
+        </p>
+        <div class="hero-cta">
+          <span class="status-dot"></span>
+          <span>Available for roles</span>
+          <span class="dot">·</span>
+          <!-- PLACEHOLDER: Your email address -->
+          <a href="mailto:[your@email.com]">[your@email.com]</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Work ─────────────────────────────────────────────── -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <span class="section-label">Selected Work</span>
+        <div class="projects">
+
+          <!-- ── Card 01: Clock ── -->
+          <a href="projects/clock.html" class="card">
+            <div class="card-thumb card-thumb--clock">
+              <!-- Analog clock — hands set to current time by script below -->
+              <div class="clock">
+                <div class="ch" id="clock-hour"></div>
+                <div class="cm" id="clock-min"></div>
+                <div class="cc"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-row">
+                <span class="card-num">01</span>
+                <span class="card-tag">Interaction</span>
+              </div>
+              <h2 class="card-title">Clock</h2>
+              <!-- PLACEHOLDER: One sentence describing the project -->
+              <p class="card-desc">[Short project description — one line]</p>
+              <span class="card-link">View case study →</span>
+            </div>
+          </a>
+
+          <!-- ── Card 02: Game Menu ── -->
+          <a href="projects/game-menu.html" class="card">
+            <div class="card-thumb card-thumb--game">
+              <div class="game-menu">
+                <div class="gmi active">New Game</div>
+                <div class="gmi">Continue</div>
+                <div class="gmi">Options</div>
+                <div class="gmi" style="opacity:.35">Exit</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-row">
+                <span class="card-num">02</span>
+                <span class="card-tag">UI Engineering</span>
+              </div>
+              <h2 class="card-title">Game Menu</h2>
+              <!-- PLACEHOLDER: One sentence describing the project -->
+              <p class="card-desc">[Short project description — one line]</p>
+              <span class="card-link">View case study →</span>
+            </div>
+          </a>
+
+          <!-- ── Card 03: Component Library ── -->
+          <a href="projects/component-library.html" class="card">
+            <div class="card-thumb card-thumb--components">
+              <div class="comp-stack">
+                <div class="c-btn">Button</div>
+                <div class="c-input"></div>
+                <div class="c-badge">Badge · v1.0</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-row">
+                <span class="card-num">03</span>
+                <span class="card-tag">Design Systems</span>
+              </div>
+              <h2 class="card-title">Component Library</h2>
+              <!-- PLACEHOLDER: One sentence describing the project -->
+              <p class="card-desc">[Short project description — one line]</p>
+              <span class="card-link">View case study →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── About ─────────────────────────────────────────────── -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <span class="section-label">About</span>
+        <div class="about-body">
+          <!-- PLACEHOLDER: 2–3 sentence bio
+               Focus on: what makes you distinct at the intersection of design + engineering,
+               and the kinds of companies/problems you're drawn to. -->
+          <p>[Your bio — 2–3 sentences. Describe what makes you distinct at the intersection of design and engineering, and the types of companies or problems you're drawn to.]</p>
+          <!-- PLACEHOLDER: Optional second paragraph — current situation, past experience, what's next -->
+          <p>[Additional context: current role or situation, notable past experience, or what you're looking for next.]</p>
+          <div class="about-links">
+            <!-- PLACEHOLDER: Replace # with real URLs. Add or remove links as needed. -->
+            <a href="#" class="about-link">GitHub</a>
+            <a href="#" class="about-link">LinkedIn</a>
+            <a href="#" class="about-link">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <!-- PLACEHOLDER: Your name -->
+    <span class="foot-text">[Your Name]</span>
+    <span class="foot-text">2025</span>
+  </footer>
+
+  <script>
+    // Set clock hands to current local time
+    const now = new Date();
+    const h = now.getHours() % 12;
+    const m = now.getMinutes();
+    const hourDeg = h * 30 + m * 0.5;
+    const minDeg  = m * 6;
+    document.getElementById('clock-hour').style.transform = `rotate(${hourDeg}deg)`;
+    document.getElementById('clock-min').style.transform  = `rotate(${minDeg}deg)`;
+  </script>
+
+</body>
+</html>
