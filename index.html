@@ -154,15 +154,8 @@
     <span class="foot-text" id="footer-year"></span>
   </footer>
 
+  <script src="js/config.js"></script>
   <script>
-    const CONFIG = {
-      name:      "[Your Name]",
-      handle:    "[your.name]",
-      email:     "[your@email.com]",
-      statement: "[One-line positioning statement — what you do and for whom]",
-      available: true,
-    };
-
     function populate() {
       document.title = CONFIG.name + ' — Design Engineer';
       document.getElementById('meta-desc').setAttribute('content', CONFIG.statement);

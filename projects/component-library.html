@@ -23,7 +23,7 @@
       All work
     </a>
     <!-- PLACEHOLDER: Your name or handle -->
-    <a href="../index.html" class="wordmark">[your.name]</a>
+    <a href="../index.html" class="wordmark" id="cs-wordmark">[your.name]</a>
   </nav>
 
   <main>
@@ -150,8 +150,18 @@ An honest reflection — even one or two sentences — is more compelling than n
   <footer>
     <a href="../index.html" class="foot-text">← All work</a>
     <!-- PLACEHOLDER: Your name -->
-    <span class="foot-text">[Your Name]</span>
+    <span class="foot-text" id="cs-footer-name">[Your Name]</span>
   </footer>
+
+  <script src="../js/config.js"></script>
+  <script>
+    (function () {
+      const project = document.title.split(' — ')[0];
+      document.title = project + ' — ' + CONFIG.name;
+      document.getElementById('cs-wordmark').textContent    = CONFIG.handle;
+      document.getElementById('cs-footer-name').textContent = CONFIG.name;
+    })();
+  </script>
 
 </body>
 </html>
