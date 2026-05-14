@@ -58,6 +58,12 @@
       <div class="wrap">
         <span class="section-label">Selected Work</span>
         <div class="projects"></div>
+        <a href="#" class="back-to-top" aria-label="Back to top">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 9L7 4.5L11.5 9" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -86,121 +92,8 @@
   </footer>
 
   <script src="js/config.js"></script>
-  <script>
-    // Thumb markup keyed by project id. Add a new entry here when introducing
-    // a project with a novel visual thumbnail.
-    var THUMBS = {
-      'clock': (
-        '<div class="clock">' +
-          '<div class="ch" id="clock-hour"></div>' +
-          '<div class="cm" id="clock-min"></div>' +
-          '<div class="cc"></div>' +
-        '</div>'
-      ),
-      'game-menu': (
-        '<div class="game-menu">' +
-          '<div class="gmi active">New Game</div>' +
-          '<div class="gmi">Continue</div>' +
-          '<div class="gmi">Options</div>' +
-          '<div class="gmi" style="opacity:.35">Exit</div>' +
-        '</div>'
-      ),
-      'component-library': (
-        '<div class="comp-stack">' +
-          '<div class="c-btn">Button</div>' +
-          '<div class="c-input"></div>' +
-          '<div class="c-badge">Badge · v1.0</div>' +
-        '</div>'
-      )
-    };
-
-    function buildCard(p) {
-      var card = document.createElement('a');
-      card.className = 'card';
-      card.href = p.url;
-
-      var thumb = document.createElement('div');
-      thumb.className = 'card-thumb ' + p.thumbClass;
-      thumb.innerHTML = THUMBS[p.id] || '';
-
-      var body = document.createElement('div');
-      body.className = 'card-body';
-
-      var row = document.createElement('div');
-      row.className = 'card-row';
-
-      var num = document.createElement('span');
-      num.className = 'card-num';
-      num.textContent = p.num;
-
-      var tag = document.createElement('span');
-      tag.className = 'card-tag';
-      tag.textContent = p.tag;
-
-      row.append(num, tag);
-
-      var title = document.createElement('h2');
-      title.className = 'card-title';
-      title.textContent = p.title;
-
-      var desc = document.createElement('p');
-      desc.className = 'card-desc';
-      desc.textContent = p.desc;
-
-      var link = document.createElement('span');
-      link.className = 'card-link';
-      link.textContent = 'View case study →';
-
-      body.append(row, title, desc, link);
-      card.append(thumb, body);
-      return card;
-    }
-
-    function populate() {
-      document.title = CONFIG.name + ' — ' + CONFIG.role;
-      document.getElementById('meta-desc').setAttribute('content', CONFIG.statement);
-
-      var ogTitle = CONFIG.name + ' — ' + CONFIG.role;
-      document.querySelector('meta[property="og:title"]').setAttribute('content', ogTitle);
-      document.querySelector('meta[property="og:description"]').setAttribute('content', CONFIG.statement);
-      document.querySelector('meta[name="twitter:title"]').setAttribute('content', ogTitle);
-      document.querySelector('meta[name="twitter:description"]').setAttribute('content', CONFIG.statement);
-
-      document.getElementById('nav-wordmark').textContent    = CONFIG.handle;
-      document.getElementById('hero-eyebrow').textContent   = CONFIG.role;
-      document.getElementById('hero-name').textContent      = CONFIG.name;
-      document.getElementById('hero-statement').textContent = CONFIG.statement;
-
-      var emailEl = document.getElementById('hero-email');
-      emailEl.textContent = CONFIG.email;
-      emailEl.href        = 'mailto:' + CONFIG.email;
-
-      var container = document.querySelector('.projects');
-      CONFIG.projects.forEach(function (p) {
-        container.appendChild(buildCard(p));
-      });
-
-      document.getElementById('about-bio').textContent     = CONFIG.about.bio;
-      document.getElementById('about-context').textContent = CONFIG.about.context;
-
-      document.getElementById('link-github').href   = CONFIG.links.github;
-      document.getElementById('link-linkedin').href = CONFIG.links.linkedin;
-      document.getElementById('link-resume').href   = CONFIG.links.resume;
-
-      document.getElementById('footer-name').textContent = CONFIG.name;
-      document.getElementById('footer-year').textContent = new Date().getFullYear();
-    }
-
-    populate();
-
-    // Clock hands — runs after populate() so the elements exist in the DOM
-    (function () {
-      var now = new Date();
-      var h = now.getHours() % 12, m = now.getMinutes();
-      document.getElementById('clock-hour').style.transform = 'rotate(' + (h * 30 + m * 0.5) + 'deg)';
-      document.getElementById('clock-min').style.transform  = 'rotate(' + (m * 6) + 'deg)';
-    })();
-  </script>
+  <script src="js/main.js"></script>
+  <script src="js/transitions.js"></script>
 
 </body>
 </html>

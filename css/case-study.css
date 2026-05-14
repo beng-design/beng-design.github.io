@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────
    Case Study — loaded only by projects/*.html
-   Inherits tokens and base styles from ../styles.css
+   Inherits tokens and base styles from ../css/main.css
    ───────────────────────────────────────────────────────────── */
 
 nav.case-nav {

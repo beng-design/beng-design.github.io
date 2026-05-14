@@ -69,3 +69,20 @@ footer {
   transition: color 0.15s;
 }
 a.foot-text:hover { color: var(--text-muted); }
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-subtle);
+  margin: 4rem auto 0;
+  transition: color 0.15s, border-color 0.15s;
+}
+.back-to-top:hover {
+  color: var(--text);
+  border-color: var(--text-subtle);
+}

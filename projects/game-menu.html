@@ -15,7 +15,7 @@
 
   <!-- ─── Nav ─────────────────────────────────────────────── -->
   <nav class="case-nav">
-    <a href="../index.html" class="back">
+    <a href="../index.html#work" class="back">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <path d="M9 2.5L4.5 7L9 11.5" stroke="currentColor" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +78,7 @@
             <video src="../assets/game-menu.mp4" class="demo-frame"
                    autoplay loop muted playsinline style="object-fit:cover;"></video>
         -->
-        <div class="demo-frame">
+        <div class="demo-frame" style="view-transition-name: thumb-game-menu">
           <div class="demo-ph">
             <div class="demo-ph-ring">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -148,7 +148,7 @@ An honest reflection — even one or two sentences — is more compelling than n
 
   <!-- ─── Footer ──────────────────────────────────────────────── -->
   <footer>
-    <a href="../index.html" class="foot-text">← All work</a>
+    <a href="../index.html#work" class="foot-text">← All work</a>
     <!-- PLACEHOLDER: Your name -->
     <span class="foot-text" id="cs-footer-name">[Your Name]</span>
   </footer>
@@ -162,6 +162,7 @@ An honest reflection — even one or two sentences — is more compelling than n
       document.getElementById('cs-footer-name').textContent = CONFIG.name;
     })();
   </script>
+  <script src="../js/transitions.js"></script>
 
 </body>
 </html>
