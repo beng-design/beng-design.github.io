@@ -151,7 +151,8 @@ iframe.demo-frame {
   color: var(--text);
 }
 .case-block p {
-  font-size: 0.9375rem;
+  font-family: var(--sans);
+  font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.75;
   margin-bottom: 0.875rem;
@@ -160,8 +161,8 @@ iframe.demo-frame {
   padding: 1.25rem 1.5rem;
   border: 1px dashed var(--border);
   border-radius: var(--r-s);
-  font-family: var(--mono);
-  font-size: 0.75rem;
+  font-family: var(--sans);
+  font-size: 1rem;
   color: var(--text-subtle);
   line-height: 1.7;
 }

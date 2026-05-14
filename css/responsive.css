@@ -1,0 +1,12 @@
+@media (max-width: 860px) {
+  nav.site-nav .nav-links { display: none; }
+  .projects { gap: 3.5rem; }
+}
+@media (max-width: 480px) {
+  .hero-name { font-size: 2.75rem; }
+  .wrap { padding: 0 var(--page-pad-sm); }
+  nav.site-nav { padding: 0 var(--page-pad-sm); }
+  footer { padding: 2rem var(--page-pad-sm); }
+  .card-body { padding: 1.5rem var(--page-pad-sm); }
+  .projects { gap: 2.5rem; }
+}

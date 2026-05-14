@@ -3,20 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- PLACEHOLDER: Update with your name -->
-  <title>[Your Name] — Design Engineer</title>
+  <title></title>
   <meta id="meta-desc" name="description" content="">
+  <link rel="icon" type="image/svg+xml" href="assets/site/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beng-design.github.io/">
+  <meta property="og:image" content="https://beng-design.github.io/assets/site/og-image.png">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <!-- Replace og-image.png with a real 1200×630 preview image before launch -->
+  <meta name="twitter:image" content="https://beng-design.github.io/assets/site/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
   <!-- ─── Nav ─────────────────────────────────────────────── -->
   <nav class="site-nav">
-    <!-- PLACEHOLDER: Replace with your name, handle, or a wordmark SVG -->
-    <a href="/" class="wordmark" id="nav-wordmark">[your.name]</a>
+    <a href="/" class="wordmark" id="nav-wordmark"></a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#about">About</a>
@@ -28,23 +41,14 @@
     <!-- ─── Hero ────────────────────────────────────────────── -->
     <section class="hero">
       <div class="wrap">
-        <p class="hero-eyebrow">Design Engineer</p>
-        <!-- PLACEHOLDER: Your name — can be a logotype SVG, styled text, or plain text -->
-        <h1 class="hero-name" id="hero-name">[Your Name]</h1>
-        <!-- PLACEHOLDER: One-line positioning statement
-             Examples:
-               "I build the gap between design and production."
-               "Turning design systems into living, shipped products."
-               "Designing in code for SaaS teams that move fast."        -->
-        <p class="hero-statement" id="hero-statement">
-          [One-line positioning statement — what you do and for whom]
-        </p>
+        <p class="hero-eyebrow" id="hero-eyebrow"></p>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-statement" id="hero-statement"></p>
         <div class="hero-cta">
           <span class="status-dot"></span>
           <span>Available for roles</span>
           <span class="dot">·</span>
-          <!-- PLACEHOLDER: Your email address -->
-          <a id="hero-email" href="mailto:[your@email.com]">[your@email.com]</a>
+          <a id="hero-email" href=""></a>
         </div>
       </div>
     </section>
@@ -53,74 +57,7 @@
     <section class="section" id="work">
       <div class="wrap">
         <span class="section-label">Selected Work</span>
-        <div class="projects">
-
-          <!-- ── Card 01: Clock ── -->
-          <a href="projects/clock.html" class="card">
-            <div class="card-thumb card-thumb--clock">
-              <!-- Analog clock — hands set to current time by script below -->
-              <div class="clock">
-                <div class="ch" id="clock-hour"></div>
-                <div class="cm" id="clock-min"></div>
-                <div class="cc"></div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card-row">
-                <span class="card-num">01</span>
-                <span class="card-tag">Interaction</span>
-              </div>
-              <h2 class="card-title">Clock</h2>
-              <!-- PLACEHOLDER: 2–3 sentences describing the project -->
-              <p class="card-desc">[Short project description — 2–3 sentences. What is it, what makes it interesting, and what does it say about how you work at the intersection of design and code?]</p>
-              <span class="card-link">View case study →</span>
-            </div>
-          </a>
-
-          <!-- ── Card 02: Game Menu ── -->
-          <a href="projects/game-menu.html" class="card">
-            <div class="card-thumb card-thumb--game">
-              <div class="game-menu">
-                <div class="gmi active">New Game</div>
-                <div class="gmi">Continue</div>
-                <div class="gmi">Options</div>
-                <div class="gmi" style="opacity:.35">Exit</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card-row">
-                <span class="card-num">02</span>
-                <span class="card-tag">UI Engineering</span>
-              </div>
-              <h2 class="card-title">Game Menu</h2>
-              <!-- PLACEHOLDER: 2–3 sentences describing the project -->
-              <p class="card-desc">[Short project description — 2–3 sentences. What is it, what makes it interesting, and what does it say about how you work at the intersection of design and code?]</p>
-              <span class="card-link">View case study →</span>
-            </div>
-          </a>
-
-          <!-- ── Card 03: Component Library ── -->
-          <a href="projects/component-library.html" class="card">
-            <div class="card-thumb card-thumb--components">
-              <div class="comp-stack">
-                <div class="c-btn">Button</div>
-                <div class="c-input"></div>
-                <div class="c-badge">Badge · v1.0</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card-row">
-                <span class="card-num">03</span>
-                <span class="card-tag">Design Systems</span>
-              </div>
-              <h2 class="card-title">Component Library</h2>
-              <!-- PLACEHOLDER: 2–3 sentences describing the project -->
-              <p class="card-desc">[Short project description — 2–3 sentences. What is it, what makes it interesting, and what does it say about how you work at the intersection of design and code?]</p>
-              <span class="card-link">View case study →</span>
-            </div>
-          </a>
-
-        </div>
+        <div class="projects"></div>
       </div>
     </section>
 
@@ -129,17 +66,12 @@
       <div class="wrap">
         <span class="section-label">About</span>
         <div class="about-body">
-          <!-- PLACEHOLDER: 2–3 sentence bio
-               Focus on: what makes you distinct at the intersection of design + engineering,
-               and the kinds of companies/problems you're drawn to. -->
-          <p>[Your bio — 2–3 sentences. Describe what makes you distinct at the intersection of design and engineering, and the types of companies or problems you're drawn to.]</p>
-          <!-- PLACEHOLDER: Optional second paragraph — current situation, past experience, what's next -->
-          <p>[Additional context: current role or situation, notable past experience, or what you're looking for next.]</p>
+          <p id="about-bio"></p>
+          <p id="about-context"></p>
           <div class="about-links">
-            <!-- PLACEHOLDER: Replace # with real URLs. Add or remove links as needed. -->
-            <a href="#" class="about-link">GitHub</a>
-            <a href="#" class="about-link">LinkedIn</a>
-            <a href="#" class="about-link">Resume</a>
+            <a id="link-github" class="about-link">GitHub</a>
+            <a id="link-linkedin" class="about-link">LinkedIn</a>
+            <a id="link-resume" class="about-link">Resume</a>
           </div>
         </div>
       </div>
@@ -149,34 +81,124 @@
 
   <!-- ─── Footer ──────────────────────────────────────────────── -->
   <footer>
-    <!-- PLACEHOLDER: Your name -->
-    <span class="foot-text" id="footer-name">[Your Name]</span>
+    <span class="foot-text" id="footer-name"></span>
     <span class="foot-text" id="footer-year"></span>
   </footer>
 
   <script src="js/config.js"></script>
   <script>
+    // Thumb markup keyed by project id. Add a new entry here when introducing
+    // a project with a novel visual thumbnail.
+    var THUMBS = {
+      'clock': (
+        '<div class="clock">' +
+          '<div class="ch" id="clock-hour"></div>' +
+          '<div class="cm" id="clock-min"></div>' +
+          '<div class="cc"></div>' +
+        '</div>'
+      ),
+      'game-menu': (
+        '<div class="game-menu">' +
+          '<div class="gmi active">New Game</div>' +
+          '<div class="gmi">Continue</div>' +
+          '<div class="gmi">Options</div>' +
+          '<div class="gmi" style="opacity:.35">Exit</div>' +
+        '</div>'
+      ),
+      'component-library': (
+        '<div class="comp-stack">' +
+          '<div class="c-btn">Button</div>' +
+          '<div class="c-input"></div>' +
+          '<div class="c-badge">Badge · v1.0</div>' +
+        '</div>'
+      )
+    };
+
+    function buildCard(p) {
+      var card = document.createElement('a');
+      card.className = 'card';
+      card.href = p.url;
+
+      var thumb = document.createElement('div');
+      thumb.className = 'card-thumb ' + p.thumbClass;
+      thumb.innerHTML = THUMBS[p.id] || '';
+
+      var body = document.createElement('div');
+      body.className = 'card-body';
+
+      var row = document.createElement('div');
+      row.className = 'card-row';
+
+      var num = document.createElement('span');
+      num.className = 'card-num';
+      num.textContent = p.num;
+
+      var tag = document.createElement('span');
+      tag.className = 'card-tag';
+      tag.textContent = p.tag;
+
+      row.append(num, tag);
+
+      var title = document.createElement('h2');
+      title.className = 'card-title';
+      title.textContent = p.title;
+
+      var desc = document.createElement('p');
+      desc.className = 'card-desc';
+      desc.textContent = p.desc;
+
+      var link = document.createElement('span');
+      link.className = 'card-link';
+      link.textContent = 'View case study →';
+
+      body.append(row, title, desc, link);
+      card.append(thumb, body);
+      return card;
+    }
+
     function populate() {
-      document.title = CONFIG.name + ' — Design Engineer';
+      document.title = CONFIG.name + ' — ' + CONFIG.role;
       document.getElementById('meta-desc').setAttribute('content', CONFIG.statement);
-      document.getElementById('nav-wordmark').textContent   = CONFIG.handle;
+
+      var ogTitle = CONFIG.name + ' — ' + CONFIG.role;
+      document.querySelector('meta[property="og:title"]').setAttribute('content', ogTitle);
+      document.querySelector('meta[property="og:description"]').setAttribute('content', CONFIG.statement);
+      document.querySelector('meta[name="twitter:title"]').setAttribute('content', ogTitle);
+      document.querySelector('meta[name="twitter:description"]').setAttribute('content', CONFIG.statement);
+
+      document.getElementById('nav-wordmark').textContent    = CONFIG.handle;
+      document.getElementById('hero-eyebrow').textContent   = CONFIG.role;
       document.getElementById('hero-name').textContent      = CONFIG.name;
       document.getElementById('hero-statement').textContent = CONFIG.statement;
-      const emailEl = document.getElementById('hero-email');
+
+      var emailEl = document.getElementById('hero-email');
       emailEl.textContent = CONFIG.email;
       emailEl.href        = 'mailto:' + CONFIG.email;
+
+      var container = document.querySelector('.projects');
+      CONFIG.projects.forEach(function (p) {
+        container.appendChild(buildCard(p));
+      });
+
+      document.getElementById('about-bio').textContent     = CONFIG.about.bio;
+      document.getElementById('about-context').textContent = CONFIG.about.context;
+
+      document.getElementById('link-github').href   = CONFIG.links.github;
+      document.getElementById('link-linkedin').href = CONFIG.links.linkedin;
+      document.getElementById('link-resume').href   = CONFIG.links.resume;
+
       document.getElementById('footer-name').textContent = CONFIG.name;
       document.getElementById('footer-year').textContent = new Date().getFullYear();
     }
 
     populate();
 
-    // Clock hands
+    // Clock hands — runs after populate() so the elements exist in the DOM
     (function () {
-      const now = new Date();
-      const h = now.getHours() % 12, m = now.getMinutes();
-      document.getElementById('clock-hour').style.transform = `rotate(${h * 30 + m * 0.5}deg)`;
-      document.getElementById('clock-min').style.transform  = `rotate(${m * 6}deg)`;
+      var now = new Date();
+      var h = now.getHours() % 12, m = now.getMinutes();
+      document.getElementById('clock-hour').style.transform = 'rotate(' + (h * 30 + m * 0.5) + 'deg)';
+      document.getElementById('clock-min').style.transform  = 'rotate(' + (m * 6) + 'deg)';
     })();
   </script>
 
