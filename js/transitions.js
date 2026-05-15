@@ -10,4 +10,3 @@ if ('navigation' in window) {
   });
 }
 
-history.scrollRestoration = 'auto';

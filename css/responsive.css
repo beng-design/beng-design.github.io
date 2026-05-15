@@ -1,5 +1,19 @@
 @media (max-width: 860px) {
-  nav.site-nav .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    inset: var(--nav-h) 0 0;
+    background: var(--bg);
+    padding: 2rem var(--page-pad);
+    gap: 1.5rem;
+    z-index: 98;
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { font-size: 1.125rem; }
+
   .projects { gap: 3.5rem; }
 }
 @media (max-width: 480px) {

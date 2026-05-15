@@ -29,6 +29,7 @@ function buildCard(p) {
   const card = document.createElement('a');
   card.className = 'card';
   card.href = p.url;
+  card.setAttribute('aria-label', `View case study: ${p.title}`);
   card.innerHTML = `
     <div class="card-thumb ${p.thumbClass}" style="view-transition-name: thumb-${p.id}">${THUMBS[p.id] || ''}</div>
     <div class="card-body">
@@ -38,7 +39,7 @@ function buildCard(p) {
       </div>
       <h2 class="card-title">${p.title}</h2>
       <p class="card-desc">${p.desc}</p>
-      <span class="card-link">View case study →</span>
+      <span class="card-link" aria-hidden="true">View case study →</span>
     </div>
   `;
   return card;
@@ -84,6 +85,24 @@ function populate() {
 }
 
 populate();
+
+(function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const links  = document.getElementById('nav-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', function () {
+    const open = links.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+})();
 
 // Clock hands — runs after populate() so the elements exist in the DOM
 (function () {
